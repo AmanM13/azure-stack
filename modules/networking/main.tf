@@ -9,21 +9,19 @@ resource "azurerm_subnet" "web-subnet" {
   name                 = "web-subnet"
   virtual_network_name = azurerm_virtual_network.vnet01.name
   resource_group_name  = var.resource_group
-  address_prefixes       = [var.websubnetcidr]
+  address_prefixes     = [var.websubnetcidr]
 }
 
 resource "azurerm_subnet" "app-subnet" {
   name                 = "app-subnet"
   virtual_network_name = azurerm_virtual_network.vnet01.name
   resource_group_name  = var.resource_group
-  address_prefixes       = [var.appsubnetcidr]
+  address_prefixes     = [var.appsubnetcidr]
 }
 
 resource "azurerm_subnet" "db-subnet" {
   name                 = "db-subnet"
   virtual_network_name = azurerm_virtual_network.vnet01.name
   resource_group_name  = var.resource_group
-  address_prefixes       = [var.dbsubnetcidr]
+  address_prefixes     = [var.dbsubnetcidr]
 }
-
-
