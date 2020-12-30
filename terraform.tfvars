@@ -1,4 +1,4 @@
-name = "tier_stack"
+name = "azure-stack"
 location = "Central India"
 vnetcidr = "192.168.0.0/16"
 websubnetcidr = "192.168.1.0/24"
