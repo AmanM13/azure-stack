@@ -35,15 +35,19 @@ _Note: Keep main and variable files different for each component_
 A module is a container for multiple resources that are used together. Modules can be used to create lightweight abstractions, so that you can describe your infrastructure in terms of its architecture, rather than directly in terms of physical objects.
 
 For the solution, we have created and used five modules:
-1. resourcegroup
-2. networking
-3. securitygroup
-4. compute
-5. database
+1. resourcegroup - creating resourcegroup
+2. networking - creating azure virtual network and required subnets
+3. securitygroup - creating network security group, setting desired security rules and associating them to subnets
+4. compute - creating availability sets, network interfaces and virtual machines
+5. database - creating database server and database
+
+All the stacks are placed in the modules folder and the variable are stored under **terraform.tfvars**
+
+To run the code you need to append the variables in the terraform.tfvars
 
 Each module consists minimum two files: main.tf, vars.tf
 
-resourcegroup and networking consists of one extra file output.tf
+resourcegroup and networking modules consists of one extra file named output.tf
 
 ## Deployment
 
